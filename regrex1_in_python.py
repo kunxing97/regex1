@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--file", required=True)
+parser.add_argument("file")
 args = parser.parse_args()
 
 
@@ -25,7 +25,8 @@ args = parser.parse_args()
 # In[23]:
 
 
-regrex1 = pd.read_csv("regrex1.csv")
+regrex1 = pd.read_csv(args.file)
+regrex1
 
 
 # In[13]:
