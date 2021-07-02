@@ -15,7 +15,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 import argparse
-parser = argparse.ArgumentParser() 
+parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--file", required=True)
 args = parser.parse_args()
 
