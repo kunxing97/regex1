@@ -1,4 +1,7 @@
-mydata = read.csv("regrex1.csv")
+args <- commandArgs(trailingOnly = TRUE)
+
+mydata = read.csv(args)
+#mydata = read.csv("regrex1.csv")
 mydata
 xval = mydata$x
 yval = mydata$y
