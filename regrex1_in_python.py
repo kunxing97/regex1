@@ -10,6 +10,7 @@ import pandas as pd
 import sklearn
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -25,8 +26,8 @@ args = parser.parse_args()
 # In[23]:
 
 
-regrex1 = pd.read_csv(args.file)
-regrex1
+regrex1 = pd.read_csv(sys.argv[1])
+print("loading {}".format(sys.argv[1]))
 
 
 # In[13]:
