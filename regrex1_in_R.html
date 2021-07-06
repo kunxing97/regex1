@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>regrex1 in R</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>regrex1_in_R</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14256,16 +14256,21 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="reading-data">reading data<a class="anchor-link" href="#reading-data">&#182;</a></h1>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">mydata</span> <span class="o">=</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;regrex1.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;regrex1.csv&quot;</span><span class="p">)</span>
 <span class="n">mydata</span>
-<span class="n">xval</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">$</span><span class="n">x</span>
-<span class="n">yval</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">$</span><span class="n">y</span>
+<span class="n">xval</span> <span class="o">&lt;-</span> <span class="n">mydata</span><span class="o">$</span><span class="n">x</span>
+<span class="n">yval</span> <span class="o">&lt;-</span> <span class="n">mydata</span><span class="o">$</span><span class="n">y</span>
 </pre></div>
 
      </div>
@@ -14334,10 +14339,15 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="plotting-scatterplot">plotting scatterplot<a class="anchor-link" href="#plotting-scatterplot">&#182;</a></h1>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span> <span class="n">yval</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Scatterplot in R&quot;</span><span class="p">)</span>
@@ -14592,10 +14602,15 @@ height=420
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="modeling-data">modeling data<a class="anchor-link" href="#modeling-data">&#182;</a></h1>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">linearmodel</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">yval</span> <span class="o">~</span> <span class="n">xval</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">mydata</span><span class="p">)</span> 
@@ -14638,7 +14653,7 @@ Coefficients:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">predict</span><span class="p">(</span><span class="n">linearmodel</span><span class="p">,</span> <span class="n">mydata</span><span class="p">)</span>
@@ -14667,7 +14682,7 @@ Coefficients:
 .dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
 .dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
 .dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
-</style><dl class=dl-inline><dt>1</dt><dd>9.75005834841097</dd><dt>2</dt><dd>15.7604033883952</dd><dt>3</dt><dd>6.11730158862488</dd><dt>4</dt><dd>6.16465522187216</dd><dt>5</dt><dd>3.20079329824849</dd><dt>6</dt><dd>3.47263089161781</dd><dt>7</dt><dd>11.8548183734564</dd><dt>8</dt><dd>6.44917328606921</dd><dt>9</dt><dd>12.8767850692282</dd><dt>10</dt><dd>9.77026784879265</dd><dt>11</dt><dd>14.1254151810456</dd><dt>12</dt><dd>1.43761345612488</dd><dt>13</dt><dd>3.66046036575346</dd><dt>14</dt><dd>1.93353874490287</dd><dt>15</dt><dd>17.5499348339577</dd><dt>16</dt><dd>0.954566770531285</dd><dt>17</dt><dd>15.4069352640724</dd><dt>18</dt><dd>10.5077164803674</dd><dt>19</dt><dd>19.6033785786222</dd><dt>20</dt><dd>4.09040757975596</dd><dt>21</dt><dd>25.97670209605</dd><dt>22</dt><dd>11.9394208897601</dd><dt>23</dt><dd>14.7560704723682</dd><dt>24</dt><dd>13.6106673183827</dd><dt>25</dt><dd>9.69279809732953</dd><dt>26</dt><dd>12.0923790691195</dd><dt>27</dt><dd>0.775455120089692</dd><dt>28</dt><dd>16.8725203064579</dd><dt>29</dt><dd>3.76428172065545</dd><dt>30</dt><dd>17.8665503399374</dd></dl>
+</style><dl class=dl-inline><dt>1</dt><dd>6.8680310089466</dd><dt>2</dt><dd>7.47584191493646</dd><dt>3</dt><dd>4.65016381741099</dd><dt>4</dt><dd>6.05153429336044</dd><dt>5</dt><dd>3.91795759403534</dd><dt>6</dt><dd>3.18077931046252</dd><dt>7</dt><dd>9.53371196182541</dd><dt>8</dt><dd>5.77558495241752</dd><dt>9</dt><dd>8.82448979030461</dd><dt>10</dt><dd>5.77671070189613</dd><dt>11</dt><dd>8.96849191110942</dd><dt>12</dt><dd>4.07514036498548</dd><dt>13</dt><dd>3.1256175860109</dd><dt>14</dt><dd>2.63966906107997</dd><dt>15</dt><dd>10.8513548203037</dd><dt>16</dt><dd>3.02889694330746</dd><dt>17</dt><dd>10.2493602866199</dd><dt>18</dt><dd>6.58110561058729</dd><dt>19</dt><dd>12.098450711456</dd><dt>20</dt><dd>3.9032759445852</dd><dt>21</dt><dd>13.9746998424635</dd><dt>22</dt><dd>6.8922346227366</dd><dt>23</dt><dd>10.503169887817</dd><dt>24</dt><dd>8.75825819598004</dd><dt>25</dt><dd>7.34638072489695</dd><dt>26</dt><dd>8.16949121866991</dd><dt>27</dt><dd>2.70402440627353</dd><dt>28</dt><dd>9.04082131510976</dd><dt>29</dt><dd>3.27032330023985</dd><dt>30</dt><dd>10.8813279001715</dd></dl>
 
 </div>
 
@@ -14680,7 +14695,7 @@ Coefficients:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span> <span class="n">yval</span> <span class="p">,</span><span class="n">col</span> <span class="o">=</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="n">main</span> <span class="o">=</span> <span class="s">&quot;Linear Regression in R&quot;</span><span class="p">,</span>
@@ -14939,20 +14954,6 @@ height=420
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
